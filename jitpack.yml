@@ -1,4 +1,6 @@
 jdk:
   - openjdk17
 before_install:
-  - ./gradlew dependencies
+  - chmod +x gradlew
+install:
+  - ./gradlew :ellevenpurchaseandads:clean :ellevenpurchaseandads:assembleRelease :ellevenpurchaseandads:publishToMavenLocal

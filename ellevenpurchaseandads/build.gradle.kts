@@ -59,3 +59,18 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
+
+apply(plugin = "maven-publish")
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.matghazaryan"
+                artifactId = "ellevenpurchaseandads"
+                version = "1.0.0"
+            }
+        }
+    }
+}

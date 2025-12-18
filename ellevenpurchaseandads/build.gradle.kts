@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("maven-publish")
 }
 
 android {
@@ -60,16 +61,23 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
 
-apply(plugin = "maven-publish")
-
+// Configure Maven Publish
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.github.matghazaryan.EllevenPurchaseAndAdsAndroid"
+                // JitPack expects: com.github.User:Repo:Tag
+                // So Group = com.github.matghazaryan
+                // Artifact = EllevenPurchaseAndAdsAndroid (Repo Name, usually) OR module name if multi-module.
+                // BEST PRACTICE FOR JITPACK MULTI-MODULE:
+                // Group = com.github.matghazaryan
+                // Artifact = ellevenpurchaseandads
+                // Result: com.github.matghazaryan:ellevenpurchaseandads:1.0.6
+                
+                groupId = "com.github.matghazaryan"
                 artifactId = "ellevenpurchaseandads"
-                version = "1.0.5"
+                version = "1.0.6"
             }
         }
     }

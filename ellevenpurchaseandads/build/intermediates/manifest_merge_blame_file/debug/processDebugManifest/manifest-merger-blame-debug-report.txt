@@ -1,0 +1,17 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.elleven.purchaseandads" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+6    <!-- Permissions needed for Google Mobile Ads and Billing -->
+7    <uses-permission android:name="android.permission.INTERNET" />
+7-->/Users/matevosghazaryan/Documents/development/projects/EllevenLibraries/EllevenPurchaseAndAdsAndroid/ellevenpurchaseandads/src/main/AndroidManifest.xml:4:5-67
+7-->/Users/matevosghazaryan/Documents/development/projects/EllevenLibraries/EllevenPurchaseAndAdsAndroid/ellevenpurchaseandads/src/main/AndroidManifest.xml:4:22-64
+8    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+8-->/Users/matevosghazaryan/Documents/development/projects/EllevenLibraries/EllevenPurchaseAndAdsAndroid/ellevenpurchaseandads/src/main/AndroidManifest.xml:5:5-79
+8-->/Users/matevosghazaryan/Documents/development/projects/EllevenLibraries/EllevenPurchaseAndAdsAndroid/ellevenpurchaseandads/src/main/AndroidManifest.xml:5:22-76
+9    <uses-permission android:name="com.android.vending.BILLING" />
+9-->/Users/matevosghazaryan/Documents/development/projects/EllevenLibraries/EllevenPurchaseAndAdsAndroid/ellevenpurchaseandads/src/main/AndroidManifest.xml:6:5-67
+9-->/Users/matevosghazaryan/Documents/development/projects/EllevenLibraries/EllevenPurchaseAndAdsAndroid/ellevenpurchaseandads/src/main/AndroidManifest.xml:6:22-64
+10
+11</manifest>
